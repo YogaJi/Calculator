@@ -55,12 +55,20 @@
                     android:textSize="26sp" />
 
                 <Button
-                    android:id="@+id/power"
+                    android:id="@+id/power2"
                     style="@android:style/Widget.Holo.Button"
                     android:layout_width="80dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="13dp"
-                    android:text="@string/x"
+                    android:text="@string/x2"
+                    android:textSize="26sp" />
+                <Button
+                    android:id="@+id/power3"
+                    style="@android:style/Widget.Holo.Button"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="13dp"
+                    android:text="@string/x3"
                     android:textSize="26sp" />
             </LinearLayout>
 

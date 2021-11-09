@@ -17,5 +17,6 @@
     <string name="decimal">.</string>
     <string name="equal">=</string>
     <string name="divide">/</string>
-    <string name="x">x^</string>
+    <string name="x2">x²</string>
+    <string name="x3">x³</string>
 </resources>

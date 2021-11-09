@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity
         Button equal = findViewById(R.id.equal);
         Button decimal = findViewById(R.id.decimal);
         Button clearButton = findViewById(R.id.clearButton);
-        Button power = findViewById(R.id.power);
+        Button power2 = findViewById(R.id.power2);
+        Button power3 = findViewById(R.id.power3);
         TextView screen = findViewById(R.id.screen);
 
         //2. set Listener
@@ -57,8 +58,8 @@ public class MainActivity extends AppCompatActivity
         equal.setOnClickListener(this);
         decimal.setOnClickListener(this);
         clearButton.setOnClickListener(this);
-        power.setOnClickListener(this);
-
+        power2.setOnClickListener(this);
+        power3.setOnClickListener(this);
     }
 
         //3.add onClick function
@@ -100,8 +101,11 @@ public class MainActivity extends AppCompatActivity
                     input = "";
                     count = 0;
                     break;
-                case R.id.power:
-                    getnum1();
+                case R.id.power2:
+                    power2Getnum1();
+                    break;
+                case R.id.power3:
+                    power3Getnum1();
                     break;
                 case R.id.decimal:
                     //set two decimal in num1 num2
@@ -215,9 +219,23 @@ public class MainActivity extends AppCompatActivity
 
         }//end of get result
 
-        public void getnum1(){
+        public void power2Getnum1(){
             double p = Double.parseDouble(input);
             p = p * p;
+            String sumString = String.valueOf(p);
+
+            if((sumString.contains("."))&&(sumString.charAt(sumString.length()-1)=='0')){
+                int result = (int)p;
+                input = String.valueOf(result);
+
+            }else{
+                input = String.valueOf(p);
+            }
+        }
+
+        public void power3Getnum1(){
+            double p = Double.parseDouble(input);
+            p = p * p * p;
             String sumString = String.valueOf(p);
 
             if((sumString.contains("."))&&(sumString.charAt(sumString.length()-1)=='0')){
